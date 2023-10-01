@@ -1,0 +1,69 @@
+#help-me-out {
+  position: fixed;
+  display: flex;
+  bottom: 3rem;
+  left: 3rem;
+  padding: 1.25rem 1rem 1.25rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 12.5rem;
+  background: #141414;
+}
+
+#help-me-out .divider {
+  background: #e8e8e8;
+  width: 0.0625rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+#help-me-out .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 20rem;
+}
+
+#help-me-out .control-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#help-me-out .control-btn {
+  cursor: pointer;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+#help-me-out .control-btn-container p {
+  margin: 0;
+  padding: 2px;
+}
+
+#help-me-out .trash-btn-container {
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border-radius: 2rem;
+  border: 1px solid #000;
+  background: #4b4b4b;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#help-me-out .trash-btn-container .trash-btn {
+  cursor: pointer;
+}
