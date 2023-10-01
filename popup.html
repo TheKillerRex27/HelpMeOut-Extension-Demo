@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpMeOut</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="nav">
+      <!-- Logo and text -->
+      <span class="logo-span">
+        <img class="logo" src="/assets/icon-48.png" alt="Logo" />
+        <h6 class="logo-text">HelpMeOut</h6>
+      </span>
+      <!-- Navigation buttons -->
+      <span class="nav-buttons">
+        <!-- Settings button -->
+        <button title="Settings">
+          <img src="/assets/settings-cog.svg" alt="Settings" />
+        </button>
+        <!-- Close button with an ID for JavaScript interaction -->
+        <button id="close-btn" title="Close">
+          <img src="/assets/close-circle.svg" alt="Close" />
+        </button>
+      </span>
+    </nav>
+    <!-- Description of the extension -->
+    <p class="description">
+      This extension helps you record and share help videos with ease.
+    </p>
+    <!-- Layout settings section -->
+    <div class="layout-settings">
+      <div>
+        <!-- Full-screen button -->
+        <button id="full-screen-button" class="layout-button">
+          <img src="/assets/full-screen.svg" alt="Fullscreen button" />
+          <p>Full Screen</p>
+        </button>
+      </div>
+      <div>
+        <!-- Current tab button with an initial active state -->
+        <button id="current-tab-button" class="layout-button active-button">
+          <img src="/assets/current-tab-active.svg" alt="Current tab button" />
+          <p>Current Tab</p>
+        </button>
+      </div>
+    </div>
+    <!-- Toggle switches section for camera and audio -->
+    <div class="toggles">
+      <div class="toggle">
+        <span>
+          <!-- Camera icon -->
+          <img src="/assets/camera.svg" alt="Camera icon" />
+          <p>Camera</p>
+        </span>
+        <!-- Toggle switch for camera -->
+        <label for="camera" class="switch">
+          <input id="camera" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle">
+        <span>
+          <!-- Microphone icon -->
+          <img src="/assets/microphone.svg" alt="Microphone icon" />
+          <p>Audio</p>
+        </span>
+        <!-- Toggle switch for audio -->
+        <label for="microphone" class="switch">
+          <input id="microphone" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <!-- Start recording button -->
+      <input
+        id="start-button"
+        type="submit"
+        class="start-button"
+        value="Start Recording"
+      />
+    </div>
+
+    <!-- Include the JavaScript file for interaction -->
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>

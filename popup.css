@@ -1,0 +1,193 @@
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&family=Work+Sans&display=swap");
+
+/* Apply a margin to the entire body */
+body {
+  margin: 1.5rem;
+}
+
+/* Style for the navigation bar */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4.5rem;
+}
+
+/* Style for buttons inside the navigation bar */
+.nav button {
+  cursor: pointer;
+}
+
+/* Style for the logo section */
+.logo-span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* Style for the logo image */
+.logo {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Style for the logo text */
+.logo-text {
+  margin: 0;
+  color: var#120b48; /* Note: There might be a missing '#' in 'var#' */
+  font-family: "Sora";
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Style for the navigation buttons section */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for buttons within the navigation buttons section */
+.nav-buttons button {
+  background: none;
+  border: none;
+}
+
+/* Style for the description text */
+.description {
+  color: var(--primary-primary-400, #413c6d);
+  font-family: "Work Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* Style for the layout settings section */
+.layout-settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+/* Style for layout buttons */
+.layout-button {
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 0.75rem;
+  color: #928fab;
+  cursor: pointer;
+  font-family: "Work Sans";
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Hover effect for layout buttons */
+.layout-button:hover {
+  border: 1.5px solid #120b48;
+}
+
+/* Style for the active button */
+.active-button {
+  color: #120b48;
+}
+
+/* Style for the toggles section */
+.toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Style for individual toggles */
+.toggle {
+  display: flex;
+  width: 15.75rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1.5px solid #100a42;
+  border-radius: 0.75rem;
+}
+
+/* Style for text and icons within toggles */
+.toggle span {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* Style for text within toggles */
+.toggle span p {
+  color: #100a42;
+  font-family: "Work Sans";
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Style for the switch input element */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.25rem;
+  border: 2px solid #100a42;
+  border-radius: 0.75rem;
+}
+
+/* Style for the slider element within the switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 0.75rem;
+  transition: 0.4s;
+}
+
+/* Style for the slider's knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.9rem;
+  width: 0.9rem;
+  left: 0.17rem;
+  bottom: 0.17rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Style for the checked state of the switch */
+input:checked + .slider {
+  background-color: #120b48;
+  border-radius: 34px;
+}
+
+/* Style for the checked state of the slider's knob */
+input:checked + .slider:before {
+  transform: translateX(17px);
+}
+
+/* Style for the "Start Recording" button */
+.start-button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: #fafdff;
+  font-family: "Work Sans";
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  background: #120b48;
+  border-radius: 0.75rem;
+}
