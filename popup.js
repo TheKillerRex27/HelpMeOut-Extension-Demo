@@ -55,9 +55,29 @@ function setButtonClasses(activeButton, notActiveButton) {
   }
 }
 
+let wantsWebcam = false;
+let wantsAudio = false;
+
+const webcamCheckbox = document.getElementById("camera");
+const audioCheckbox = document.getElementById("microphone");
+
 const startButton = document.getElementById("start-button");
 
 startButton.addEventListener("click", () => {
+  if (webcamCheckbox.checked && audioCheckbox.checked) {
+    wantsWebcam = true;
+    wantsAudio = true;
+  } else if (webcamCheckbox.checked && !audioCheckbox.checked) {
+    wantsWebcam = true;
+    wantsAudio = false;
+  } else if (!webcamCheckbox.checked && audioCheckbox.checked) {
+    wantsWebcam = false;
+    wantsAudio = true;
+  } else {
+    wantsWebcam = false;
+    wantsAudio = false;
+  }
+
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     const activeTab = tabs[0];
     chrome.tabs.sendMessage(
@@ -65,6 +85,8 @@ startButton.addEventListener("click", () => {
       {
         action: "Start Recording",
         tabId: activeTab.id,
+        wantsWebcam: wantsWebcam,
+        wantsAudio: wantsAudio,
       },
       function (response) {
         if (chrome.runtime.lastError) {
