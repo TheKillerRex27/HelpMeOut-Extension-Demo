@@ -18,10 +18,8 @@ To install the extension, follow these steps:
 To use the extension, follow these steps:
 
 1. Click the extension icon in the Chrome toolbar to open the popup.
-2. Select the desired recording options (screen, webcam, audio).
+2. Select the desired recording options (Webcam, Microphone).
 3. Click the "Start Recording" button to start recording.
-4. Click the "Stop Recording" button to stop recording.
-5. The recorded video will be saved to your Downloads folder.
 
 ## Development
 
