@@ -43,6 +43,7 @@ const uiHtml = `
 let stream = null,
   audio = null,
   webcam = null,
+  camAudio = null,
   mixedStream = null,
   chunks = [],
   recorder = null,
@@ -169,6 +170,7 @@ function createUI() {
   });
 
   stopButton = root.getElementById("helpMeOutstop");
+  stopButton.addEventListener("click", stopRecording);
 }
 
 async function setUpStream() {
@@ -189,7 +191,7 @@ async function setUpStream() {
     } else if (wantsWebcam && !wantsAudio) {
       webcam = await navigator.mediaDevices.getUserMedia({ video: true });
     } else if (!wantsWebcam && wantsAudio) {
-      audio = await navigator.mediaDevices.getUserMedia({
+      camAudio = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: true,
           noiseSuppression: true,
