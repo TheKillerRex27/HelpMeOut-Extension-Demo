@@ -208,7 +208,7 @@ async function startRecording() {
   createUI();
   await setUpStream();
 
-  if (stream && audio) {
+  if (stream) {
     mixedStream = new MediaStream([
       ...stream.getTracks(),
       ...audio.getTracks(),
