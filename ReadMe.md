@@ -40,4 +40,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-This project was inspired by [Screen Recorder](https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording) by Muaz Khan.
+This project was made for the Stage 5 task during a HNG internship.
